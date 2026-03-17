@@ -1,4 +1,14 @@
+main.aux
+main.bbl
+main.blg
+main.fdb_latexmk
+main.log
 main.pdf
+main.spl
+main.synctex.gz
+main.fls
+main.synctex.bak
+main.toc
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
