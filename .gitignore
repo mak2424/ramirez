@@ -9,6 +9,17 @@ main.synctex.gz
 main.fls
 main.synctex.bak
 main.toc
+main_rus.aux
+main_rus.bbl
+main_rus.blg
+main_rus.fdb_latexmk
+main_rus.log
+main_rus.pdf
+main_rus.spl
+main_rus.synctex.gz
+main_rus.fls
+main_rus.synctex.bak
+main_rus.toc
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
