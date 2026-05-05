@@ -5,7 +5,11 @@
 \usepackage[utf8x]{inputenc} %удалить перед отправкой
 \usepackage[english,russian]{babel} %удалить перед отправкой
 \graphicspath{{images/}}
-
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
 \usepackage{lineno,hyperref}
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -15,10 +19,6 @@
 
 \bibliographystyle{elsarticle-num}
 
-\usepackage{mathrsfs}
-\usepackage{amsmath}
-\usepackage{amssymb}%
-\usepackage{multirow}
 
 
 
@@ -50,18 +50,6 @@
 %% AMA style
 %\usepackage{numcompress}\bibliographystyle{model6-num-names}
 
-%% `Elsevier LaTeX' style
-\bibliographystyle{elsarticle-num}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage{xcolor}
-\newcommand{\todo}[1] {\textcolor{red}{#1}} %%for TODO comments
-\def\l{\left\langle}
-\def\r{\right\rangle}
-\usepackage{mathrsfs}
-\usepackage{amsmath}
-\usepackage{amssymb}%
 
 \begin{document}
 
@@ -255,7 +243,7 @@
 
 The research was supported by the Russian Science Foundation grant No. 24-71-10069, https://rscf.ru/en/project/24-71-10069/.
 
-\bibliography{mybibfile}
+\bibliography{mybibfile.bib}
 
 
 \end{document}
