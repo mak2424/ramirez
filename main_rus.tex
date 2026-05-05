@@ -1,160 +1,130 @@
-%% 
-%% Copyright 2007-2024 Elsevier Ltd
-%% 
-%% This file is part of the 'Elsarticle Bundle'.
-%% ---------------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.3 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for Elsevier's document class `elsarticle'
-%% with numbered style bibliographic references
-%% SP 2008/03/01
-%% $Id: elsarticle-template-num.tex 249 2024-04-06 10:51:24Z rishi $
-%%
-
-%\documentclass[preprint,12pt]{elsarticle} %вернуть перед отправкой
-\documentclass[utf8, babel, sor, jor, amsmath,amssymb, reprint]{elsarticle} %удалить перед отправкой
+% \documentclass[review]{elsarticle}
+\documentclass[utf8, babel, sor, jor, amsmath, amssymb, reprint]{elsarticle} %удалить перед отправкой
+\usepackage{comment} %удалить перед отправкой
 \usepackage[T2A]{fontenc} %удалить перед отправкой
 \usepackage[utf8x]{inputenc} %удалить перед отправкой
 \usepackage[english,russian]{babel} %удалить перед отправкой
+\graphicspath{{images/}}
 
-%% Use the option review to obtain double line spacing
-%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+\usepackage{lineno,hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\modulolinenumbers[5]
 
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
-%% for a journal layout:
-%% \documentclass[final,1p,times]{elsarticle}
-%% \documentclass[final,1p,times,twocolumn]{elsarticle}
-%% \documentclass[final,3p,times]{elsarticle}
-%% \documentclass[final,3p,times,twocolumn]{elsarticle}
-%% \documentclass[final,5p,times]{elsarticle}
-%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+\journal{Journal of \LaTeX\ Templates}
 
-%% For including figures, graphicx.sty has been loaded in
-%% elsarticle.cls. If you prefer to use the old commands
-%% please give \usepackage{epsfig}
+\bibliographystyle{elsarticle-num}
 
-%% The amssymb package provides various useful mathematical symbols
-\usepackage{amssymb}
-%% The amsmath package provides various useful equation environments.
+\usepackage{mathrsfs}
 \usepackage{amsmath}
-%% The amsthm package provides extended theorem environments
-%% \usepackage{amsthm}
+\usepackage{amssymb}%
+\usepackage{multirow}
 
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers.
-%% \usepackage{lineno}
 
-\journal{Physics Letters A}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{xcolor}
+\newcommand{\todo}[1] {\textcolor{red}{#1}} %%for TODO comments
+\def\l{\left\langle}
+\def\r{\right\rangle}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}%
 
 \begin{document}
 
 \begin{frontmatter}
 
-%% Title, authors and addresses
 
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for theassociated footnote;
-%% use the fnref command within \author or \affiliation for footnotes;
-%% use the fntext command for theassociated footnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for theassociated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \affiliation{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
-%% \fntext[label3]{}
+\title{Вырождение основного состояния и макроскопические характеристики фрустрированной модели Изинга}
 
-\title{Вырождение основного состояния и макроскопические характеристики фрустрированной модели Изинга }
+\author[mainaddress, secondaryaddress]{Aleksandr Makarov\corref{mycorrespondingauthor}}
+\ead{makarov.ag@dvfu.ru}
 
-%% use optional labels to link authors explicitly to addresses:
-%% \author[label1,label2]{}
-%% \affiliation[label1]{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
-%%
-%% \affiliation[label2]{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
+\author[mainaddress, secondaryaddress]{Viacheslav Trukhin\corref{mycorrespondingauthor}}
+\ead{trukhin.vo@dvfu.ru}
 
-\author{Aleksandr Makarov, Konstantin Nefedev} %% Author name
+\author[mainaddress]{Egor Prokhorov\corref{mycorrespondingauthor}}
+\ead{prokhorov.ei@dvfu.ru}
 
-%% Author affiliation
-\affiliation{organization={},%Department and Organization
-            addressline={}, 
-            city={},
-            postcode={}, 
-            state={},
-            country={}}
+\author[mainaddress, secondaryaddress]{Konstantin Nefedev\corref{mycorrespondingauthor}}
+\ead{nefedev.kv@dvfu.ru}
 
-%% Abstract
+
+\address[mainaddress]{Far Eastern Federal University, Vladivostok, Russky Island, 10 Ajax Bay, 690922, the Russian Federation}
+\address[secondaryaddress]{Institute of Applied Mathematics, Far Eastern Branch, Russian Academy of Science, Vladivostok, Radio 7, 690041, the Russian Federation}
+
 \begin{abstract}
-%% Text of abstract
-Текст абстракта.
+
+Текст абстракта.  
+
 \end{abstract}
+
 
 %%Graphical abstract
 \begin{graphicalabstract}
-%\includegraphics{grabs}
+	%\includegraphics{figs/grabs}
 \end{graphicalabstract}
+
 
 %%Research highlights
 \begin{highlights}
-\item Research highlight 1
-\item Research highlight 2
+	\item Research highlight 1
+	\item Research highlight 2
 \end{highlights}
+
 
 %% Keywords
 \begin{keyword}
-%% keywords here, in the form: keyword \sep keyword
-
-%% PACS codes here, in the form: \PACS code \sep code
-
-%% MSC codes here, in the form: \MSC code \sep code
-%% or \MSC[2008] code \sep code (2000 is the default)
-
+	ИЗМЕНИТЬ!!!! Ising model, Ground state, GPU and CPU high performance calculations, statistical thermodynamics.
 \end{keyword}
+
 
 \end{frontmatter}
 
-%% Add \usepackage{lineno} before \begin{document} and uncomment 
-%% following line to enable line numbers
-%% \linenumbers
+\linenumbers
 
-%% main text
-%%
+\newpage
+\tableofcontents
 
-%% Use \section commands to start a section
-
+\newpage
 \section{Введение}
 
-Исследование пространства конфигураций моделей, допускающих вырождение основного состояния, является актуальной задачей статистической физики спиновых систем. В таких моделях обычно имеют место фрустрации, которые зачастую являются одной из причин вырождения \cite{trukhin2025low , trukhin2024thermodynamic}. 
+
+Исследование пространства конфигураций моделей, допускающих вырождение основного состояния, является актуальной задачей статистической физики спиновых систем. В таких моделях обычно имеют место фрустрации, которые зачастую являются одной из причин вырождения \cite{trukhin2025low, trukhin2024thermodynamic}. 
+
 
 
 
@@ -163,7 +133,7 @@
 %% Labels are used to cross-reference an item using \ref command.
 
 \textbf{Методы} 
- 
+
 
 перебор,  метрополис, может быть ванг Ландау 
 
@@ -203,9 +173,9 @@
 
 один из главных вопросов
 
-\bf{Коррелированный парамагнетик
-является простым примером классической спиновой жидкости. Ключевой вопрос заключается в том, отличается ли спиновая жидкость
-качественно от обычного коррелированного парамагнетика? Интересно, что ответ в отношении спинового льда ‘да - спиновый лед отличается от парамагнетика, а суперспиновый лед отличается от корелированного суперпарамагнетика’.}
+\textbf{Коррелированный парамагнетик
+	является простым примером классической спиновой жидкости. Ключевой вопрос заключается в том, отличается ли спиновая жидкость
+	качественно от обычного коррелированного парамагнетика? Интересно, что ответ в отношении спинового льда ‘да - спиновый лед отличается от парамагнетика, а суперспиновый лед отличается от корелированного суперпарамагнетика’.}
 
 
 Какую долю энергии фрустраций занимают в общей энергии системы, и как от этой доли зависит температурура Кюри Вейса?
@@ -233,7 +203,7 @@
 
 спиновое стекло с вырождением
 
- и три графика обратная восприимчивость к ним же
+и три графика обратная восприимчивость к ним же
 
 2. Параграф по рамирезу. Показать, что вырождения это следствие фрустрации. Как связаны фрустрации и вырождения.
 
@@ -242,28 +212,29 @@
 4. Распределение спинового избытка для J0.
 
 
+\section{Рисунки}
 
 
-\section{Картинки}
+
 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.8\linewidth]{5422423995803439529}
+	\includegraphics[width=0.8\linewidth]{figs/5422423995803439529}
 	\caption{Figure Caption}
 	\label{5422423995803439529}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.8\linewidth]{5422423995803439528}
+	\includegraphics[width=0.8\linewidth]{figs/5422423995803439528}
 	\caption{Figure Caption}
 	\label{5422423995803439528}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.8\linewidth]{5422423995803439527}
+	\includegraphics[width=0.8\linewidth]{figs/5422423995803439527}
 	\caption{Figure Caption}
 	\label{5422423995803439527}
 \end{figure}
@@ -271,135 +242,20 @@
 
 
 
-%% Use \subsection commands to start a subsection.
-\subsection{Example Subsection}
-\label{subsec1}
 
-Subsection text.
-
-%% Use \subsubsection, \paragraph, \subparagraph commands to 
-%% start 3rd, 4th and 5th level sections.
-%% Refer following link for more details.
-%% https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands
-
-\subsubsection{Mathematics}
-%% Inline mathematics is tagged between $ symbols.
-This is an example for the symbol $\alpha$ tagged as inline mathematics.
-
-%% Displayed equations can be tagged using various environments. 
-%% Single line equations can be tagged using the equation environment.
-\begin{equation}
-f(x) = (x+a)(x+b)
-\end{equation}
-
-%% Unnumbered equations are tagged using starred versions of the environment.
-%% amsmath package needs to be loaded for the starred version of equation environment.
-\begin{equation*}
-f(x) = (x+a)(x+b)
-\end{equation*}
-
-%% align or eqnarray environments can be used for multi line equations.
-%% & is used to mark alignment points in equations.
-%% \\ is used to end a row in a multiline equation.
-\begin{align}
- f(x) &= (x+a)(x+b) \\
-      &= x^2 + (a+b)x + ab
-\end{align}
-
-\begin{eqnarray}
- f(x) &=& (x+a)(x+b) \nonumber\\ %% If equation numbering is not needed for a row use \nonumber.
-      &=& x^2 + (a+b)x + ab
-\end{eqnarray}
-
-%% Unnumbered versions of align and eqnarray
-\begin{align*}
- f(x) &= (x+a)(x+b) \\
-      &= x^2 + (a+b)x + ab
-\end{align*}
-
-\begin{eqnarray*}
- f(x)&=& (x+a)(x+b) \\
-     &=& x^2 + (a+b)x + ab
-\end{eqnarray*}
-
-%% Refer following link for more details.
-%% https://en.wikibooks.org/wiki/LaTeX/Mathematics
-%% https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
-
-%% Use a table environment to create tables.
-%% Refer following link for more details.
-%% https://en.wikibooks.org/wiki/LaTeX/Tables
-\begin{table}[t]%% placement specifier
-%% Use tabular environment to tag the tabular data.
-%% https://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular_environment
-\centering%% For centre alignment of tabular.
-\begin{tabular}{l c r}%% Table column specifiers
-%% Tabular cells are separated by &
-  1 & 2 & 3 \\ %% A tabular row ends with \\
-  4 & 5 & 6 \\
-  7 & 8 & 9 \\
-\end{tabular}
-%% Use \caption command for table caption and label.
-\caption{Table Caption}\label{Table1}
-\end{table}
+\section{Заключение}
 
 
-%% Use figure environment to create figures
-%% Refer following link for more details.
-%% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
-\begin{figure}[t]%% placement specifier
-%% Use \includegraphics command to insert graphic files. Place graphics files in 
-%% working directory.
-\centering%% For centre alignment of image.
-\includegraphics{example-image-a}
-%% Use \caption command for figure caption and label.
-\caption{Figure Caption}\label{fig1}
-%% https://en.wikibooks.org/wiki/LaTeX/Importing_Graphics#Importing_external_graphics
-\end{figure}
+Текст заключения.
 
 
-%% The Appendices part is started with the command \appendix;
-%% appendix sections are then done as normal sections
-\appendix
-\section{Example Appendix Section}
-\label{app1}
+\section{Благодарности}
 
-Appendix text.
+Исследование выполнено за счет гранта Российского научного фонда № 24-71-10069, https://rscf.ru/project/24-71-10069/.
 
-%% For citations use: 
-%%       \cite{<label>} ==> [1]
+The research was supported by the Russian Science Foundation grant No. 24-71-10069, https://rscf.ru/en/project/24-71-10069/.
 
-%%
-Example citation, See \cite{lamport94}.
+\bibliography{mybibfile}
 
-%% If you have bib database file and want bibtex to generate the
-%% bibitems, please use
-%%
-%%  \bibliographystyle{elsarticle-num} 
-%%  \bibliography{<your bibdatabase>}
 
-%% else use the following coding to input the bibitems directly in the
-%% TeX file.
-
-%% Refer following link for more details about bibliography and citations.
-%% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
-
-\begin{thebibliography}{00}
-
-%% For numbered reference style
-%% \bibitem{label}
-%% Text of bibliographic item
-
-\bibitem{lamport94}
-  Leslie Lamport,
-  \textit{\LaTeX: a document preparation system},
-  Addison Wesley, Massachusetts,
-  2nd edition,
-  1994.
-
-\end{thebibliography}
 \end{document}
-
-\endinput
-%%
-%% End of file `elsarticle-template-num.tex'.
