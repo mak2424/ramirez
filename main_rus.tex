@@ -210,7 +210,7 @@
 
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/C_max(f)}
@@ -224,7 +224,7 @@
 	\label{fig:C_max}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/T_C_max(f)}
@@ -238,7 +238,7 @@
 	\label{fig:T_C_max}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/chi_max(f)}
@@ -252,7 +252,7 @@
 	\label{fig:chi_max}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/T_chi_max(f)}
@@ -266,7 +266,7 @@
 	\label{fig:T_chi_max}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/g(f)}
@@ -281,48 +281,109 @@
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figs/spin_glass}
+	\includegraphics[width=0.6\textwidth]{figs/spin_glass}
 	\caption{spin glass}
 	\label{fig:spin_glass}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figs/ferro1}
+	\includegraphics[width=0.6\textwidth]{figs/ferro1}
 	\caption{ferro1}
 	\label{fig:ferro1}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figs/ferro2}
+	\includegraphics[width=0.6\textwidth]{figs/ferro2}
 	\caption{ferro2}
 	\label{fig:ferro2}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figs/ferro3}
+	\includegraphics[width=0.6\textwidth]{figs/ferro3}
 	\caption{ferro3}
 	\label{fig:ferro3}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figs/antiferro1}
+	\includegraphics[width=0.6\textwidth]{figs/antiferro1}
 	\caption{antiferro1}
 	\label{fig:antiferro1}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figs/antiferro2}
+	\includegraphics[width=0.6\textwidth]{figs/antiferro2}
 	\caption{antiferro2}
 	\label{fig:antiferro2}
 \end{figure}
 
+\section{Магнитный структурный фактор конфигураций основного состояния}
+Для различных конфигураций основного состояния спинового стекла Эдвардса-Андерсон, полученных алгоритмом Метрополиса-Гастингса \cite{metropolis1953equation} и подтвержденных точным расчетом плотности состояний \cite{trukhin2025low}, был рассчитан магнитный структурный фактор через Фурье-образ спин-спиновых корреляционных функций скалярных переменных Изинга:
+\begin{equation}     
+	I(\vec{q}) = \frac{1}{N} \sum_{i=1}^{N} \sum_{j=1}^{N} S_i S_j \exp(i \vec{q} \cdot \vec{r}_{ij})    
+	 \label{eq:I_q_double_sum} 
+\end{equation}
+где $\vec{q}$ -- вектор рассеяния.
+
+\begin{figure}[H]
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J112_9_config_1_msf}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J-112_0_config_1_msf}
+	\end{minipage}
+	\caption{Магнитный структурный фактор $I(\vec{q})$ для ферромагнитного (слева) и антиферромагнитного (справа) упорядочение в решетке из 64 спинов.}
+	\label{fig:msf_ferro_anti}
+\end{figure}
+
+На рисунке \ref{fig:msf_ferro_anti} изображен  магнитный структурный фактор $I(\vec{q})$ в обратном пространстве $(q_x, q_y)$ для ферромагнетика (слева) и антиферромагнетика (справа). Белые пунктирные линии - граница зоны Бриллюэна ($\pm\pi$). Положения пиков $I(\vec{q})$ абсолютно подтверждают тип магнитного порядка в системах. Для ферромагнетика пик наблдается в центре $(0,0)$, для антиферромагнетика -- на границах зоны Бриллюэна в точках $(\pm\pi,\pm\pi)$ \ref{luscombe1996nonequilibrium}. 
+
+\begin{figure}[H]
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J0_1_config_5_msf}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J0_1_config_5}
+	\end{minipage}
+	\vfill
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J0_1_config_4_msf}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J0_1_config_4}
+	\end{minipage}
+	\vfill
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J0_1_config_3_msf}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cell64_J0_1_config_3}
+	\end{minipage}
+	\caption{Магнитный структурный фактор $I(\vec{q})$ для конфигураций вырожденного основного состояния спинового стекла Эдвардса-Андерсона ($P_+=0.5$) при разном спиновом избытке ($M_{gs}=-2,-8,-14$) слева и соответствующая конфигурация спиновых переменных справа.}
+	\label{fig:msf}
+\end{figure}
+
+На рисунке \ref{fig:msf} слева изображен магнитный структурный фактор в обратном пространстве $(q_x, q_y)$ для нескольких конфигураций вырожденного основного состояния спинового стекла Эдвардса-Андерсона ($M_{gs}=-2,-8,-14$). Справа показана соответсвующая $I(\vec{q})$ конфигурация спиновых переменных. Белые и черные круги - $S_i=\pm1$, прямые и зубчатые линии - ферромагнитные и антиферромагнитые связи, обведенные пары узлов - фрустрированные пары.
+
+Так как спиновое стекло характеризуется разупорядченным положением спинов за счет конкурирующих взаимодействий, то пики $I(\vec{q})$ в обратном пространстве размыты, расположены хаотично и отличаются для разных конфигураций спиновых переменных соответствующих одному и тому же основному состоянию. Тем не менее, на рисунке \ref{fig:msf} снизу для $I(\vec{q})$ при $|M_{gs}| = 14$ мы можем видеть, что помимо большого количества хаотично расположенных пятен, также наблюдается пятна в точках $(\pm\pi,\pm\pi)$ и продолговатая область с высоким значением $I(\vec{q})$ и центром в точке $(0,0)$. То есть в каком-то виде происходит ферро- и антиферромагнитное упорядочение одновременно. Это является следствием того, что в конфигурации основного состояния спинового стекла образуются ферромагнитные и антиферромагнитные кластеры.
 
 \section{Заключение}
 
