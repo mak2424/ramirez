@@ -346,3 +346,14 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+# Python helpers for the article agent system
+__pycache__/
+
+# Local AI agent system and working memory
+/.agents/
+/.codex/
+/AGENTS.md
+/research/
+/tools/figure_catalog.py
+/tools/test_figure_catalog.py
